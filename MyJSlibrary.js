@@ -141,7 +141,7 @@ let MyJsLibrary = {
     /**
      * 文字缩略显示
      * data: 需要缩略的字符串;
-     * num: 需要显示的长度;
+     * num:  需要显示的长度;
      */
     breviary: function ( data, num ) { 
 	    if ( data !== null && data.length > num ) {
