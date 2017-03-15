@@ -11,7 +11,8 @@ let MyJsLibrary = {
 	 * "SF": 			时分 		  1010
 	 * "S": 			时 			  10
 	 * "M": 			秒 			  10
-	 * time:日期{
+	 * 
+	 * time:(日期)
 	 * ""			   	为空获取当前时间
 	 * "lastDay"       	获取一天前时间
 	 * "lastWeek"      	获取一周前时间
@@ -110,7 +111,7 @@ let MyJsLibrary = {
      * type:
      * 1:限制输入数字0-9;
      * 2:限制输入数字,小数点;
-     * 3:限制输入数字，小数点，负号
+     * 3:限制输入数字，小数点，负号;
      */
     keyPress: function ( type ) {
         let theEvent = window.event || arguments.callee.caller.arguments[0],
@@ -139,8 +140,8 @@ let MyJsLibrary = {
 
     /**
      * 文字缩略显示
-     * data:需要缩略的字符串
-     * num: 需要显示的长度
+     * data:需要缩略的字符串;
+     * num: 需要显示的长度;
      */
     breviary: function ( data, num ) { 
 	    if ( data !== null && data.length > num ) {
@@ -240,8 +241,8 @@ let MyJsLibrary = {
 
 	 /**
 	  * 根据页面URL获取参数
-	  * name  要获取的参数名   
-	  * param 返回的参数值  
+	  * name  要获取的参数名;  
+	  * param 返回的参数值;
 	  */
 	getUrlParam:function ( name ) {
 		let urlParams = location.search,
