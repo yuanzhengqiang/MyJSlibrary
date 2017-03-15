@@ -53,39 +53,39 @@ let MyJsLibrary = {
 	        strSeconds = "0" + strSeconds;
 	    }
 		
-		let currentdate = date.getFullYear() + "" + month + "" + strDate + "" + strHour + "" + strMinutes + "" + strSeconds ;//默认获取年月日时分秒
+		let currentdate = date.getFullYear() + "" + month + "" + strDate + "" + strHour + "" + strMinutes + "" + strSeconds;//默认获取年月日时分秒
 		switch ( type )
 			{
 				case "NYRSF": //年月日时分
-				  	currentdate = date.getFullYear() + "" + month + "" + strDate + "" + strHour + "" + strMinutes ;
+				  	currentdate = date.getFullYear() + "" + month + "" + strDate + "" + strHour + "" + strMinutes;
 				break;
 
 				case "NYR": //年月日
-				  	currentdate = date.getFullYear() + "" + month + "" + strDate ;
+				  	currentdate = date.getFullYear() + "" + month + "" + strDate;
 				break;
 
 				case "NY": //年月
-				  	currentdate = date.getFullYear() + "" + month ;
+				  	currentdate = date.getFullYear() + "" + month;
 				break;
 
 				case "N": //年
-				  	currentdate = date.getFullYear() ;
+				  	currentdate = date.getFullYear();
 				break;
 
 				case "SFM": //时分秒
-				  	currentdate = strHour + "" + strMinutes + "" + strSeconds ;
+				  	currentdate = strHour + "" + strMinutes + "" + strSeconds;
 				break;
 
 				case "SF": //时分
-				  	currentdate = strHour + "" + strMinutes ;
+				  	currentdate = strHour + "" + strMinutes;
 				break;
 
 				case "S": //时
-				  	currentdate = strHour ;
+				  	currentdate = strHour;
 				break;
 
 				case "M": //年月
-				  	currentdate = strSeconds ;
+				  	currentdate = strSeconds;
 				break;
 
 				case "lastDay": //获取一天前时间
@@ -109,9 +109,9 @@ let MyJsLibrary = {
     /**
      * 限制输入
      * type:
-     * 1:限制输入数字0-9;
-     * 2:限制输入数字,小数点;
-     * 3:限制输入数字，小数点，负号;
+     * 1: 限制输入数字0-9;
+     * 2: 限制输入数字,小数点;
+     * 3: 限制输入数字，小数点，负号;
      */
     keyPress: function ( type ) {
         let theEvent = window.event || arguments.callee.caller.arguments[0],
@@ -140,12 +140,12 @@ let MyJsLibrary = {
 
     /**
      * 文字缩略显示
-     * data:需要缩略的字符串;
+     * data: 需要缩略的字符串;
      * num: 需要显示的长度;
      */
     breviary: function ( data, num ) { 
 	    if ( data !== null && data.length > num ) {
-	        return data.substring( 0, num ) + "..." ;
+	        return data.substring( 0, num ) + "...";
 	    } else {
 	        return data;
 	    }
@@ -184,15 +184,15 @@ let MyJsLibrary = {
 	 */
 	formatTime: function ( time ) {
 		if ( time !== null && time.length === 4 ) {
-			time =  time.substring( 0, 2) + ":" + time.substring(2, 4) ;
+			time =  time.substring( 0, 2) + ":" + time.substring(2, 4);
 		} else if ( time !== null && time.length === 6 ) {
-			time =  time.substring( 0, 2) + ":" + time.substring(2, 4) + ":" + time.substring(4, 6) ;
+			time =  time.substring( 0, 2) + ":" + time.substring(2, 4) + ":" + time.substring(4, 6);
 		} else if ( time !== null && time.length === 8 ) {
-			time =  time.substring( 0, 4) + "-" + time.substring(4, 6) + "-" + time.substring(6, 8) ;
+			time =  time.substring( 0, 4) + "-" + time.substring(4, 6) + "-" + time.substring(6, 8);
 		} else if ( time !== null && time.length === 12 ) {
-			time =  time.substring(0, 4) + "-" + time.substring(4, 6) + "-" + time.substring(6, 8) + " " +time.substring( 8, 10 ) + ":" + time.substring( 10, 12 ) ;
+			time =  time.substring(0, 4) + "-" + time.substring(4, 6) + "-" + time.substring(6, 8) + " " +time.substring( 8, 10 ) + ":" + time.substring( 10, 12 );
 		} else if(time !== null && time.length === 14 ) {
-			time =  time.substring(0, 4) + "-" + time.substring(4, 6) + "-" + time.substring(6, 8) + " " +time.substring( 8, 10 ) + ":" + time.substring( 10, 12 ) + ":" + time.substring( 12, 14 ) ;
+			time =  time.substring(0, 4) + "-" + time.substring(4, 6) + "-" + time.substring(6, 8) + " " +time.substring( 8, 10 ) + ":" + time.substring( 10, 12 ) + ":" + time.substring( 12, 14 );
 		}
 		return time;
 	},
