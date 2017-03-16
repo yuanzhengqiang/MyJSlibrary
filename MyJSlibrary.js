@@ -239,11 +239,11 @@ let MyJsLibrary = {
 		}
 	},
 
-	 /**
-	  * 根据页面URL获取参数
-	  * name  要获取的参数名;  
-	  * param 返回的参数值;
-	  */
+	/**
+	 * 根据页面URL获取参数
+	 * name  要获取的参数名;  
+	 * param 返回的参数值;
+	 */
 	getUrlParam:function ( name ) {
 		let urlParams = location.search,
 			urlParamArray = urlParams.split( "&" ),
